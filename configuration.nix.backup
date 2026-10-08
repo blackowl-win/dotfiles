@@ -31,78 +31,15 @@
   };
   homebrew = {
     enable = true;
-    onActivation.cleanup = "none";  # zap remove anything not listed here
-    onActivation.autoUpdate = false; # true default
+    onActivation.cleanup = "zap";  # remove anything not listed here
+    onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
     brews = [
       "herdr"
-      # Development
-    "git"
-    "gh"
-#    "node"
-    "pnpm"
-    "python@3.13"
-    "uv"
-
-    # AWS / Infrastructure
-    "awscli"
-    "opentofu"
-    "terraform"
-    "helm"
-
-    # Kubernetes
-    "kubernetes-cli"
-    "kubectx"
-    #"k9s"
-    "kubeseal"
-    #"flux"
-    "fluxcd/tap/flux"
-    "pluto"
-
-    # Database
-    "mongosh"
-    "mongodb-database-tools"
-    "redis"
-    "redpanda"
-    "redpanda-data/tap/redpanda"
-    # CI/CD and security
-    "act"
-    "actionlint"
-    "shellcheck"
-#    "snyk"
-
-    # Testing
-    "k6"
-    "hey"
-
-    # Terminal utilities
-    "ripgrep"
-    "fd"
-    "fzf"
-    "yq"
-    "yamllint"
-    "wget"
-    "watch"
-    "pandoc"
-    "terraform"
-    {
-    name = "hashicorp/tap/terraform";
-    link = true;
-  }
     ];
     casks = [
       "wezterm"
       "claude-code"
-      "codex"
-      "baby-menu"
-    ];
-    taps = [
-    "mongodb/brew"
-    "hashicorp/tap"
-    "redpanda-data/tap"
- #   "snyk/tap"
-    "fluxcd/tap"
-    "kunchenguid/tap"
     ];
   };
 }
