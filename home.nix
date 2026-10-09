@@ -17,6 +17,9 @@ in
     lazygit
     neovim
     nodejs_24
+    kubectx
+    kubectl
+    flux
     # the font everything renders in
     nerd-fonts.hack
   ];
@@ -36,9 +39,18 @@ in
       push = "git push";
       pull = "git pull";
       m = "git switch main";
+      mt = "git switch master";
       cc = "claude --dangerously-skip-permissions";
       co = "codex -- --full-auto";
       k = "kubectl";
+      kx = "kubectx";
+      kn = "kubens";
+      kgp = "kubectl get pods";
+      kgn = "kubectl get nodes";
+      fc = "flux check";
+      fks = "flux get ks -A";
+      fhr = "flux get hr -A";
+      fsa = "flux get source all -A";
     };
   };
 

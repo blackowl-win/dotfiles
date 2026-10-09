@@ -40,6 +40,8 @@
     "git"
     "gh"
 #    "node"
+#    "graphify"
+    "graphviz"
     "pnpm"
     "python@3.13"
     "uv"
@@ -49,7 +51,7 @@
     "opentofu"
     "terraform"
     "helm"
-
+    #"automic-vault"
     # Kubernetes
     "kubernetes-cli"
     "kubectx"
@@ -95,6 +97,7 @@
       "claude-code"
       "codex"
       "baby-menu"
+      "automic-vault/isotopes/automic-vault"
     ];
     taps = [
     "mongodb/brew"
@@ -103,6 +106,7 @@
  #   "snyk/tap"
     "fluxcd/tap"
     "kunchenguid/tap"
+    "automic-vault/isotopes"
     ];
   };
 }
