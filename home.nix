@@ -31,6 +31,11 @@ in
     autosuggestion.enable = true;      # ghost text from history
     syntaxHighlighting.enable = true;  # commands turn green when valid
     initContent = ''
+      path=("$HOME/.nix-profile/bin" $path)
+      export NVM_DIR="$HOME/.nvm"
+      if [[ -s /opt/homebrew/opt/nvm/nvm.sh ]]; then
+        . /opt/homebrew/opt/nvm/nvm.sh
+      fi
       bindkey '^f' autosuggest-accept
     '';
     shellAliases = {

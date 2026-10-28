@@ -87,6 +87,7 @@
     "watch"
     "pandoc"
     "terraform"
+    "nvm"
     {
     name = "hashicorp/tap/terraform";
     link = true;
