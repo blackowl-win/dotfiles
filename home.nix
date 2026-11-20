@@ -77,8 +77,12 @@ in
       fsa = "flux get source all -A";
       gp = "git pull";
       gpu = "git push -u origin";
-      gcr = "git checkout -b";
+      gcb = "git checkout -b";
       gcm = "git checkout master";
+      fm = "pnpm turbo format";
+      li = "pnpm turbo lint";
+      ft = "pnpm feature";
+      st = "git status";
     };
   };
 
