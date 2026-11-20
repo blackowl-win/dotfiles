@@ -20,6 +20,8 @@ in
     kubectx
     kubectl
     flux
+    uv
+    #graphify
     # the font everything renders in
     nerd-fonts.hack
   ];
@@ -73,6 +75,10 @@ in
       fks = "flux get ks -A";
       fhr = "flux get hr -A";
       fsa = "flux get source all -A";
+      gp = "git pull";
+      gpu = "git push -u origin";
+      gcr = "git checkout -b";
+      gcm = "git checkout master";
     };
   };
 
