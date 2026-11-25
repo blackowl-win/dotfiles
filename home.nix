@@ -17,6 +17,7 @@ in
     lazygit
     neovim
     nodejs_24
+    (yarn.override { nodejs = nodejs_24; })
     kubectx
     kubectl
     flux
@@ -24,6 +25,7 @@ in
     #graphify
     # the font everything renders in
     nerd-fonts.hack
+    mongosh
   ];
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
@@ -83,6 +85,7 @@ in
       li = "pnpm turbo lint";
       ft = "pnpm feature";
       st = "git status";
+      gco = "git commit -m";
     };
   };
 
