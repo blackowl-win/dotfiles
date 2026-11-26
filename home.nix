@@ -22,6 +22,8 @@ in
     kubectl
     flux
     uv
+    go
+    golangci-lint
     #graphify
     # the font everything renders in
     nerd-fonts.hack
@@ -54,6 +56,11 @@ in
     if [[ -n "$NVM_BIN" && -d "$NVM_BIN" ]]; then
       path=("$NVM_BIN" ''${path:#$NVM_BIN})
       typeset -U path
+    fi
+
+    # Go binaries
+    if command -v go >/dev/null 2>&1; then
+      export PATH="$PATH:$(go env GOPATH)/bin"
     fi
 
     bindkey '^f' autosuggest-accept
